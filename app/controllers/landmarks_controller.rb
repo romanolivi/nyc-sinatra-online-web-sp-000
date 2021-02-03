@@ -9,7 +9,7 @@ class LandmarksController < ApplicationController
   end
 
   post "/landmarks" do
-    @landmark = Landmark.create(name: params["landmark"]["name"], year_completed: params["landmark"]["year"])
+    @landmark = Landmark.create(name: params["landmark"]["name"], year_completed: params["landmark"]["year_completed"])
     redirect "/landmarks/#{@landmark.id}"
   end
 
