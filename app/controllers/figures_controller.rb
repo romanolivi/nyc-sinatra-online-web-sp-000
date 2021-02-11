@@ -27,6 +27,7 @@ class FiguresController < ApplicationController
 
 
   get "/figures/:id" do 
+    binding.pry
     @figure = Figure.find(params[:id])
     @titles = @figure.titles 
     @landmarks = @figure.landmarks
